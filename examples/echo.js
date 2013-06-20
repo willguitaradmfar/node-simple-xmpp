@@ -42,6 +42,7 @@ xmpp.on('error', function(err) {
 });
 
 xmpp.on('buddy', function(jid, state, statusText) {
+	if(jid == argv[4])
 		console.log(new Date()+"---------------%s is now '%s' (%s)", jid, state, statusText);
 });
 
