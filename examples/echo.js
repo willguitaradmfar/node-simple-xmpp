@@ -32,7 +32,9 @@ xmpp.on('online', function() {
 });
 
 xmpp.on('chat', function(from, message) {
-	xmpp.send(from, 'echo: ' + message);
+//	xmpp.send(from, 'echo: ' + message);
+        console.log(new Date()+" >>("+from+')<<  |  message ' + message);
+
 });
 
 xmpp.on('error', function(err) {
@@ -40,7 +42,7 @@ xmpp.on('error', function(err) {
 });
 
 xmpp.on('buddy', function(jid, state, statusText) {
-	console.log("---------------%s is now '%s' (%s)", jid, state, statusText);
+		console.log(new Date()+"---------------%s is now '%s' (%s)", jid, state, statusText);
 });
 
 
