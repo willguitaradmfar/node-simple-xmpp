@@ -33,6 +33,14 @@ xmpp.on('online', function() {
 
 xmpp.on('chat', function(from, message) {
 //	xmpp.send(from, 'echo: ' + message);
+	
+	var nums = remover_espacos(message).split('+');
+	var soma = 0;
+	for(var i in nums){
+		soma += (nums[i]-0);
+	}
+	if(soma > 0)
+		xmpp.send(from, 'total = ' + soma);
         console.log(new Date()+" >>("+from+')<<  |  message ' + message);
 
 });
@@ -45,6 +53,15 @@ xmpp.on('buddy', function(jid, state, statusText) {
 	if(jid == argv[4])
 		console.log(new Date()+"---------------%s is now '%s' (%s)", jid, state, statusText);
 });
+
+ function remover_espacos(str){
+    r = "";
+    for(i = 0; i < str.length; i++){
+      if(str.charAt(i) != ' ')
+        r += str.charAt(i);
+   }
+  return r;
+  }
 
 
 xmpp.connect({
