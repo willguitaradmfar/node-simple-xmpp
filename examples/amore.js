@@ -1,4 +1,3 @@
-
 var xmpp = require('../lib/simple-xmpp');
 var argv = process.argv;
 
@@ -59,7 +58,7 @@ var msgs = [
 	];
 
 var cronJob = require('cron').CronJob;
-new cronJob('5 5,12,17,30,32,44,51,55 * * * *', function(){
+new cronJob('5 5,8,12,17,30,32,44,51,55 * * * *', function(){
 	var msg = msgs[Math.floor(Math.random()*msgs.length)];
 	console.log(argv[4], msg);
 	xmpp.send(argv[4], msg)
