@@ -34,13 +34,6 @@ xmpp.on('online', function() {
 xmpp.on('chat', function(from, message) {
 //	xmpp.send(from, 'echo: ' + message);
 	
-	var nums = remover_espacos(message).split('+');
-	var soma = 0;
-	for(var i in nums){
-		soma += (nums[i]-0);
-	}
-	if(soma > 0)
-		xmpp.send(from, 'total = ' + soma);
         console.log(new Date()+" >>("+from+')<<  |  message ' + message);
 
 });
