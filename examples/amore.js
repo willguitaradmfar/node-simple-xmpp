@@ -41,20 +41,8 @@ xmpp.connect({
 
 
 var msgs = [
-	'cueki', 
-	'Te amo tanto, preciso de vc pra sempre', 
-	'Quero sempre estar bem com vc diulli',
-	':)',
-	'eu sei que vc vai ser a mulher que sempre sonhei',
-	':( ... ESTOU COM SAUDADES',
-	'preciso que seje você a pessoa que vai me fazer feliz', 
-	'Nossa que saudades diulli, te amo',
-	'cueki cueki cueki cueki',
-	'Nossa como é bom lembrar de coisas nossa, memories, santa paulina, perna dormindo, celular debaixo do banco (caiu kkk), MacDonald batata, agora o parque, nossa é muito bom ter você diulli, fazer história, coisas lindas, TE AMO MUITO',
-	'MIMIMIMIMI, PRECISO MUITO, NÃO CONSIGO FICAR SEM, SOU VICIADO ME VC, ESTOU COM MUITA VONTADE',
-	':)', 
-	'Vc é tudo pra mim', 
-	'te amo muito ... vc é a mulher da minha vida'
+	'frase1',
+	'frase2'
 	];
 
 var cronJob = require('cron').CronJob;
